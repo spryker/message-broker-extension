@@ -7,15 +7,20 @@
 
 namespace Spryker\Zed\MessageBrokerExtension\Dependecy\Plugin;
 
+use Symfony\Component\Messenger\Envelope;
 use Symfony\Component\Messenger\Stamp\StampInterface;
 
 /**
- * This is a marker interface. A MessageDecorator only needs to be serializable.
- *
  * Use this plugin to decorate messages. Properties from the MessageDecorator need to be initialized during construction.
  *
  * Initialized properties will be available for further processing.
  */
 interface MessageDecoratorPluginInterface extends StampInterface
 {
+    /**
+     * @param Envelope $envelope
+     *
+     * @return Envelope
+     */
+    public function decorateMessage(Envelope $envelope): Envelope;
 }
