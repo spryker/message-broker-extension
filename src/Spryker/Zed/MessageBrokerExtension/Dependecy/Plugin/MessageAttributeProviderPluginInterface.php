@@ -7,20 +7,19 @@
 
 namespace Spryker\Zed\MessageBrokerExtension\Dependecy\Plugin;
 
-use Symfony\Component\Messenger\Envelope;
-use Symfony\Component\Messenger\Stamp\StampInterface;
+use Generated\Shared\Transfer\MessageAttributesTransfer;
 
 /**
  * Use this plugin to decorate messages. Properties from the MessageDecorator need to be initialized during construction.
  *
  * Initialized properties will be available for further processing.
  */
-interface MessageDecoratorPluginInterface extends StampInterface
+interface MessageAttributeProviderPluginInterface
 {
     /**
-     * @param Envelope $envelope
+     * @param \Generated\Shared\Transfer\MessageAttributesTransfer $messageAttributesTransfer
      *
-     * @return Envelope
+     * @return \Generated\Shared\Transfer\MessageAttributesTransfer
      */
-    public function decorateMessage(Envelope $envelope): Envelope;
+    public function provideMessageAttributes(MessageAttributesTransfer $messageAttributesTransfer): MessageAttributesTransfer;
 }

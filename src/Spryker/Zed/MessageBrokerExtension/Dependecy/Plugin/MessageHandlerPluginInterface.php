@@ -10,7 +10,12 @@ namespace Spryker\Zed\MessageBrokerExtension\Dependecy\Plugin;
 interface MessageHandlerPluginInterface
 {
     /**
-     * @return array
+     * Return an array where the key is the class name to be handled and the value is the callable that handles the message.
+     *
+     * @example
+     * return [Foo::class => [$this, 'onFoo']]
+     *
+     * @return array<string, callable>
      */
     public function handles(): array;
 }

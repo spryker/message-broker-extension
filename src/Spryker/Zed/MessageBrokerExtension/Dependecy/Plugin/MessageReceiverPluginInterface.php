@@ -14,5 +14,5 @@ interface MessageReceiverPluginInterface extends ReceiverInterface
     /**
      * @return string
      */
-    public function getClientName(): string;
+    public function getTransportName(): string;
 }

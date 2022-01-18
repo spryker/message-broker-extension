@@ -14,5 +14,5 @@ interface MessageSenderPluginInterface extends SenderInterface
     /**
      * @return string
      */
-    public function getClientName(): string;
+    public function getTransportName(): string;
 }
