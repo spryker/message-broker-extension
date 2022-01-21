@@ -5,7 +5,7 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace Spryker\Zed\MessageBrokerExtension\Dependecy\Plugin;
+namespace Spryker\Zed\MessageBrokerExtension\Dependency\Plugin;
 
 use Symfony\Component\Messenger\Transport\Sender\SenderInterface;
 
