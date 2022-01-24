@@ -17,5 +17,5 @@ interface MessageHandlerPluginInterface
      *
      * @return array<string, callable>
      */
-    public function handles(): array;
+    public function handles(): iterable;
 }
