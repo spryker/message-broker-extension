@@ -17,6 +17,8 @@ use Generated\Shared\Transfer\MessageAttributesTransfer;
 interface MessageAttributeProviderPluginInterface
 {
     /**
+     * @api
+     *
      * @param \Generated\Shared\Transfer\MessageAttributesTransfer $messageAttributesTransfer
      *
      * @return \Generated\Shared\Transfer\MessageAttributesTransfer

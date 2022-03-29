@@ -12,6 +12,8 @@ interface MessageHandlerPluginInterface
     /**
      * Return an array where the key is the class name to be handled and the value is the callable that handles the message.
      *
+     * @api
+     *
      * @example
      * return [Foo::class => [$this, 'onFoo']]
      *

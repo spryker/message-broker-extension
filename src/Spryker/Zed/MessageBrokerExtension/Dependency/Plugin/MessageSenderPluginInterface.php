@@ -12,6 +12,8 @@ use Symfony\Component\Messenger\Transport\Sender\SenderInterface;
 interface MessageSenderPluginInterface extends SenderInterface
 {
     /**
+     * @api
+     *
      * @return string
      */
     public function getTransportName(): string;

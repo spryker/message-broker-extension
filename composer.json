@@ -4,28 +4,25 @@
     "description": "MessageBrokerExtension module",
     "license": "proprietary",
     "require": {
-        "php": ">=7.4",
-        "spryker/kernel": "^3.30.0"
+        "php": ">=7.4"
     },
     "require-dev": {
         "spryker/code-sniffer": "*",
-        "spryker/testify": "*"
+        "spryker/symfony": "*"
+    },
+    "suggest": {
+        "spryker/symfony": "If you want to use a MessageSenderPluginInterface or MessageReceiverPluginInterface."
     },
     "autoload": {
         "psr-4": {
             "Spryker\\": "src/Spryker/"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "SprykerTest\\": "tests/SprykerTest/"
-        }
-    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "cs-check": "phpcs -p -s --standard=vendor/spryker/code-sniffer/SprykerStrict/ruleset.xml src/ tests/",
-        "cs-fix": "phpcbf -p --standard=vendor/spryker/code-sniffer/SprykerStrict/ruleset.xml src/ tests/"
+        "cs-check": "phpcs -p -s --standard=vendor/spryker/code-sniffer/SprykerStrict/ruleset.xml src/",
+        "cs-fix": "phpcbf -p --standard=vendor/spryker/code-sniffer/SprykerStrict/ruleset.xml src/"
     },
     "extra": {
         "branch-alias": {
@@ -33,6 +30,9 @@
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }
