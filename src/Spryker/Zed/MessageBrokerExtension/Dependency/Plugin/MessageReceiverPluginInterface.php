@@ -7,6 +7,7 @@
 
 namespace Spryker\Zed\MessageBrokerExtension\Dependency\Plugin;
 
+use Spryker\Zed\MessageBrokerAws\Communication\Plugin\MessageBroker\Receiver\AwsSqsMessageReceiverPlugin;
 use Symfony\Component\Messenger\Transport\Receiver\ReceiverInterface;
 
 interface MessageReceiverPluginInterface extends ReceiverInterface
@@ -17,4 +18,11 @@ interface MessageReceiverPluginInterface extends ReceiverInterface
      * @return string
      */
     public function getTransportName(): string;
+
+    /**
+     * @api
+     *
+     * @return self
+     */
+    public function setChannels(array $channels): self;
 }
