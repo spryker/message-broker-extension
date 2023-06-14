@@ -18,11 +18,4 @@ interface MessageReceiverPluginInterface extends ReceiverInterface
      * @return string
      */
     public function getTransportName(): string;
-
-    /**
-     * @api
-     *
-     * @return self
-     */
-    public function setChannels(array $channels): self;
 }
